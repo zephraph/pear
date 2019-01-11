@@ -2,6 +2,55 @@
 
 Credit where credit is due.
 
+I was just reading the docs on topics and wanted to brainstorm another way pear
+could be used:
+
+```
+$ pear init
+# => create the ~/.pear-authors file
+
+$ pear known
+# => list the known authors from ~/.pear-authors
+
+$ pear known:add foo
+# => add an entry for foo to the ~/.pear-authors file
+
+$ pear known:remove foo
+# => remove an entry for foo from the ~/.pear-authors file
+
+$ pear known:add-org foo
+# => add all users from GitHub org foo to the ~/.pear-authors file
+
+$ pear known:remove-org foo
+# => remove all users from GitHub org foo from the ~/.pear-authors file
+
+$ pear coauthors
+# => spits back the current list of coauthors from the ./.pear file
+
+$ pear coauthors:add foo
+# => adds foo to the ./.pear file
+
+$ pear coauthors:set foo
+# => sets foo as the only coauthors in the ./.pear file
+
+$ pear coauthors:clear
+# => removes the ./.pear file
+
+$ pear hook
+# => check for hook
+
+$ pear hook:add
+# => add the post-commit hook
+
+$ pear hook:clear
+# => removes the post-commit hook
+
+$ pear hook:run
+# => the command run when post-commit triggers
+```
+
+
+
 [![CircleCI](https://circleci.com/gh/jonallured/pear/tree/master.svg?style=shield)](https://circleci.com/gh/jonallured/pear/tree/master)
 
 <!-- toc -->
